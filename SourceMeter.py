@@ -1,7 +1,6 @@
 import visa
 import pymeasure
 from pymeasure.instruments.keithley import Keithley2400
-import math
 
 ''' The goal of this module is to provide methods for getting the measurement readings of a 
 Keithley 2400 SourceMeter. The methods utilize the Keithley2400 class from PyMeasure.
