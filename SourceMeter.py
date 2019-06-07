@@ -63,13 +63,20 @@ def set_output_current(self, current_level):
         return "ERROR"
 def set_output_voltage(self, voltage_level):
     try:
-        if (abs(self.voltage_level) > 210):
+        if (abs(voltage_level) > 210):
             print("Voltage out of range. The absolute limit is 210 V.")
             return "ERROR: OUT OF RANGE"
         self.apply_voltage()
         self.source_voltage = voltage_level
-        self.enable_source()
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
 
+'Zero all sources'
+def zero_sources(self):
+    try:
+        set_output_current(self, 0)
+        set_output_voltage(self, 0)
+    except:
+        print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
+        return "ERROR"
