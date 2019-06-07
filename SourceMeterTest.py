@@ -16,6 +16,9 @@ print(get_resistance(keithley))
 keithley.shutdown()
 '''
 SM.get_current(2)
+'''
 SM.set_output_voltage(keithley, 5)
 SM.set_output_current(keithley, 10e-3)
+'''
+
 SM.zero_sources(keithley)
