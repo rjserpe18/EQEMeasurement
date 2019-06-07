@@ -8,8 +8,6 @@ Keithley 2400 SourceMeter. The methods utilize the Keithley2400 class from PyMea
 
 'Getters'
 'Returns the present current reading'
-
-
 def get_current(self):
     try:
         self.write(":CONFigure:CURRent")
@@ -19,7 +17,6 @@ def get_current(self):
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
-
 
 'Returns the present voltage reading'
 
@@ -36,7 +33,6 @@ def get_voltage(self):
 
 'Returns the present resistance reading'
 
-
 def get_resistance(self):
     try:
         self.write(":CONFigure:RESIstance")
@@ -48,7 +44,6 @@ def get_resistance(self):
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
-
 
 'Setters'
 
@@ -66,11 +61,6 @@ def set_output_current(self, current_level):
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
-
-
-'Set output voltage'
-
-
 def set_output_voltage(self, voltage_level):
     try:
         if (abs(self.voltage_level) > 210):
