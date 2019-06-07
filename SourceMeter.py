@@ -19,8 +19,6 @@ def get_current(self):
         return "ERROR"
 
 'Returns the present voltage reading'
-
-
 def get_voltage(self):
     try:
         self.write(":CONFigure:VOLTage")
@@ -46,10 +44,8 @@ def get_resistance(self):
         return "ERROR"
 
 'Setters'
-
+'None of these enable the output. This can be done with the self.enable_output() command Keithley2400'
 'Set output current'
-
-
 def set_output_current(self, current_level):
     try:
         if (abs(current_level) > 1.05):
@@ -61,6 +57,8 @@ def set_output_current(self, current_level):
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
+
+'Set output voltage'
 def set_output_voltage(self, voltage_level):
     try:
         if (abs(voltage_level) > 210):
