@@ -1,5 +1,7 @@
 import visa
 import pymeasure
+import statistics
+import time
 from pymeasure.instruments.keithley import Keithley2400
 
 ''' The goal of this module is to provide methods for getting the measurement readings of a 
@@ -46,10 +48,8 @@ def get_resistance(self):
         return "ERROR"
 
 'Setters'
-
+'None of these enable the output. This can be done with the self.enable_output() command Keithley2400'
 'Set output current'
-
-
 def set_output_current(self, current_level):
     try:
         if (abs(current_level) > 1.05):
@@ -61,15 +61,72 @@ def set_output_current(self, current_level):
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
+
+'Set output voltage'
 def set_output_voltage(self, voltage_level):
     try:
-        if (abs(self.voltage_level) > 210):
+        if (abs(voltage_level) > 210):
             print("Voltage out of range. The absolute limit is 210 V.")
             return "ERROR: OUT OF RANGE"
         self.apply_voltage()
         self.source_voltage = voltage_level
-        self.enable_source()
     except:
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
+
+'Zero all sources'
+def zero_sources(self):
+    try:
+        set_output_current(self, 0)
+        set_output_voltage(self, 0)
+    except:
+        print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
+        return "ERROR"
+def measureCurrentUntilSteady(self):
+
+    def deviationIsSteady(deviation):
+        while (deviation > 1):
+            return False
+        return True
+
+    def percentSTDV(dataSet):
+        return 100 * statistics.stdev(dataSet) / statistics.mean(dataSet)
+
+    data = []
+
+    i = 1
+
+    deviation = 1.1
+
+    while (deviationIsSteady(deviation) == False):
+
+        print("")
+        print("trial " + str(i))
+
+        data = []
+
+        print("measuring values")
+        for j in range(1, 6, 1):
+            data.append(self.get_current())
+            time.sleep(1)
+
+        print("assessing data stability...")
+        time.sleep(0.5)
+
+        deviation = percentSTDV(data)
+        print("stdv for trial " + str(i) + ": " + str(deviation))
+
+        print("data set for trial " + str(i) + ":" + str(data))
+
+        if (deviation > 1):
+            print("data unsteady. remeasuring....")
+        else:
+            print("data steady!")
+
+        i += 1
+
+    return (statistics.mean(data))
+
+
+
 

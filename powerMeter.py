@@ -67,17 +67,17 @@ class PowerMeter:
         while (deviationIsSteady(deviation) == False):
 
             print("")
-            print("trial " + str(i) + " at wavelength: " + str(thorLabs.getWavelength()))
+            print("trial " + str(i) + " at wavelength: " + str(self.getWavelength()))
 
             data = []
 
             print("measuring values")
             for j in range(1, 6, 1):
-                data.append(thorLabs.getPower())
+                data.append(self.getPower())
                 time.sleep(1)
 
             print("assessing data stability...")
-            time.sleep(2)
+            time.sleep(.5)
 
             deviation = percentSTDV(data)
             print("stdv for trial " + str(i) + ": " + str(deviation))
@@ -91,15 +91,9 @@ class PowerMeter:
 
             i += 1
 
-        print(str(statistics.mean(data))+(" W"))
+        return(statistics.mean(data))
 
 
-
-thorLabs = PowerMeter('USB0::0x1313::0x8072::P2003101::0::INSTR', "thor labs")
-
-thorLabs.setWavelength(638)
-
-thorLabs.measurePowerUntilSteady()
 
 
 
