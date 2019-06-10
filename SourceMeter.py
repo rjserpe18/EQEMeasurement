@@ -21,8 +21,6 @@ def get_current(self):
         return "ERROR"
 
 'Returns the present voltage reading'
-
-
 def get_voltage(self):
     try:
         self.write(":CONFigure:VOLTage")
