@@ -17,7 +17,7 @@ class PowerMeter:
         self.powerMeter = powerMeter
 
         self.address = address
-        self.fullName = powerMeter.query('*IDN?')
+        self.fullName = 'test'
         self.nickName = nickName
 
 
@@ -44,6 +44,7 @@ class PowerMeter:
         return float(self.powerMeter.query('sense:corr:wav?'))
 
 
+
     def getPower(self):
         power_W = float(self.powerMeter.query('measure:power?'))
         return power_W
@@ -51,7 +52,7 @@ class PowerMeter:
     def measurePowerUntilSteady(self):
 
         def deviationIsSteady(deviation):
-            while (deviation > 1):
+            while (deviation > 2 or deviation < -2):
                 return False
             return True
 
@@ -62,10 +63,9 @@ class PowerMeter:
 
         i = 1
 
-        deviation = 1.1
+        deviation = 900
 
         while (deviationIsSteady(deviation) == False):
-
             print("")
             print("trial " + str(i) + " at wavelength: " + str(self.getWavelength()))
 
@@ -76,34 +76,42 @@ class PowerMeter:
                 data.append(self.getPower())
                 time.sleep(1)
 
-            print("assessing data stability...")
-            time.sleep(.5)
-
             deviation = percentSTDV(data)
             print("stdv for trial " + str(i) + ": " + str(deviation))
 
             print("data set for trial " + str(i) + ":" + str(data))
 
-            if (deviation > 1):
-                print("data unsteady. remeasuring....")
+            if (deviation > -2 and deviation < 2) or (-7*10**-6 < statistics.mean(data) < 7*10**-6):
+                print("data steady, mean= ", statistics.mean(data))
+                return (statistics.mean(data))
             else:
-                print("data steady!")
+                print("data unsteady. remeasuring....")
 
             i += 1
 
-        return(statistics.mean(data))
 
 
+    def zero(self):
+        reading = self.measurePowerUntilSteady()
+        if reading < 0:
+            shift = 0 - reading
 
+        if reading > 0:
+            shift = 0-reading
+        return shift
 
+    # self.powerMeter.write('sense:zero')
 
+    def measure(self):
+        time.sleep(30)
+        shift = self.zero()
 
-
-
-
-
-
-
+        input('turn laser on and press enter')
+        print('waiting...')
+        time.sleep(15)
+        reading = self.measurePowerUntilSteady()
+        result = (reading + shift)*10**6
+        print('result= ',result,'µW')
 
 
 

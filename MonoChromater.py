@@ -1,17 +1,8 @@
 import visa
 import pymeasure
 import time
+from PowerMeter import PowerMeter
 
-rm = visa.ResourceManager()
-
-
-
-
-MonoChromater = rm.open_resource('GPIB1::1::INSTR')
-
-for i in range (0,5,1):
-    MonoChromater.write('F0,640')
-    time.sleep(2)
 
 
 #i3 -- slit with output light
@@ -27,7 +18,63 @@ for i in range (0,5,1):
 
 class MonoChromater:
 
-    def stepBy(nanometers):
+    def __init__(self, address):
+
+
+
+        rm = visa.ResourceManager()
+
+        monochromater = rm.open_resource(address)
+
+        self.resourceManager = rm
+        self.mono = monochromater
+        self.address = address
+
+
+
+    def stepBy(self,nanometers):
         amountToStep = 32*nanometers
-        MonoChromater.write("F0,"+str(amountToStep))
+
+        self.mono.write("F0,0")
+        self.mono.write("F0,"+str(amountToStep))
+        self.mono.write("F0,0")
+
+    #method that opens the slits, sets the initial wavelength
+    def prepForMeasurements(self,keithley):
+
+        self.mono.write('A')
+
+        while( self.mono.query('yes') == '2'):
+            return 2
+
+
+
+
+#lamp slit is #0
+#beam slit is #2
+
+
+rm = visa.ResourceManager()
+
+JV = MonoChromater('GPIB0::1::INSTR')
+
+#
+# JV.mono.write("A")
+#
+# input('enter')
+#
+# JV.mono.write("k0,2,500")
+# JV.mono.write('k0,2,0')
+
+# #
+# input('enter')
+#
+JV.stepBy(40)
+
+
+#
+# JV.mono.write('F0,-1000')
+# JV.mono.write('F0,0')
+#
+
 
