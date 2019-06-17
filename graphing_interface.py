@@ -129,7 +129,7 @@ class interface(Frame):
 
     def __init__(self,x,y):
         super().__init__()
-        Tk()
+
         self.initUI(x,y)
         self.mainloop()
 
@@ -205,6 +205,7 @@ class interface(Frame):
         self.max_higher_box.insert(0, str(max(x)))
         self.max_higher_box.pack(side=LEFT)
 
+
         min_frame = Frame(options_frame, bg='#C0C0C0')
         min_frame.pack(padx=5)
         self.min_OnOff = IntVar()
@@ -214,6 +215,7 @@ class interface(Frame):
         self.min_lower_label.pack(side=LEFT)
         self.min_lower_box = Entry(min_frame, width=7, fg='#009999')
         self.min_lower_box.insert(0, str(min(x)))
+
         self.min_lower_box.pack(side=LEFT)
         self.min_higher_label = Label(min_frame, text='and', fg='#009999', bg = '#C0C0C0')
         self.min_higher_label.pack(side=LEFT)
@@ -255,39 +257,50 @@ class interface(Frame):
         self.canvas.draw()
 
     def maximum(self):
-        if self.max_OnOff.get() == 0:
-            self.max_point.remove()
-            self.max_text.remove()
-            self.canvas.get_tk_widget().update()
-            self.canvas.draw()
-        if self.max_OnOff.get() == 1:
-            lower_val = float(self.max_lower_box.get())
-            higher_val = float(self.max_higher_box.get())
-            if lower_val not in x:
-                closest = x[0]
-                for val in x:
-                    if abs(lower_val - val) < abs(lower_val - closest):
-                        closest = val
-                lower_val = closest
-            if higher_val not in x:
-                closest = x[0]
-                for val in x:
-                    if abs(higher_val - val) < abs(higher_val - closest):
-                        closest = val
-                higher_val = closest
-            if lower_val != min(x) or higher_val != max(x):
+        if self.max_OnOff.get() == 0 and self.max_point != None:
+            try:
                 self.max_point.remove()
                 self.max_text.remove()
                 self.canvas.get_tk_widget().update()
                 self.canvas.draw()
+            except:
+                pass
+        if self.max_OnOff.get() == 1:
+            try:
+                self.max_point.remove()
+                self.max_text.remove()
+            except:
+                pass
+            lower_val = float(self.max_lower_box.get())
+            higher_val = float(self.max_higher_box.get())
+            if lower_val not in self.x:
+                closest = self.x[0]
+                for val in self.x:
+                    if abs(lower_val - val) < abs(lower_val - closest):
+                        closest = val
+                lower_val = closest
+            if higher_val not in self.x:
+                closest = self.x[0]
+                for val in self.x:
+                    if abs(higher_val - val) < abs(higher_val - closest):
+                        closest = val
+                higher_val = closest
+            if lower_val != min(self.x) or higher_val != max(self.x):
+                try:
+                    self.max_point.remove()
+                    self.max_text.remove()
+                    self.canvas.get_tk_widget().update()
+                    self.canvas.draw()
+                except:
+                    pass
             self.max_higher_box.delete(0,len(self.max_higher_box.get()))
             self.max_lower_box.delete(0,len(self.max_lower_box.get()))
             self.max_lower_box.insert(0,str(lower_val))
             self.max_higher_box.insert(0,str(higher_val))
-            self.max_x_range = x[x.index(lower_val):x.index(higher_val)]
-            self.max_y_range = y[x.index(lower_val):x.index(higher_val)]
+            self.max_x_range = self.x[self.x.index(lower_val):self.x.index(higher_val)+1]
+            self.max_y_range = self.y[self.x.index(lower_val):self.x.index(higher_val)+1]
             ymax = max(self.max_y_range)
-            xmax = x[y.index(ymax)]
+            xmax = self.x[self.y.index(ymax)]
             self.max_point, = self.ax.plot(xmax, ymax, 'ko')
             max_str = 'Max: (' + str(xmax) + ',' + str(ymax) + ')'
             self.max_text = self.ax.annotate(max_str,(xmax,ymax + ymax/100), annotation_clip = False)
@@ -296,11 +309,19 @@ class interface(Frame):
 
     def minimum(self):
         if self.min_OnOff.get() == 0:
-            self.min_point.remove()
-            self.min_text.remove()
-            self.canvas.get_tk_widget().update()
-            self.canvas.draw()
+            try:
+                self.min_point.remove()
+                self.min_text.remove()
+                self.canvas.get_tk_widget().update()
+                self.canvas.draw()
+            except:
+                pass
         if self.min_OnOff.get() == 1:
+            try:
+                self.min_point.remove()
+                self.min_text.remove()
+            except:
+                pass
             lower_val = float(self.min_lower_box.get())
             higher_val = float(self.min_higher_box.get())
             if lower_val not in self.x:
@@ -316,18 +337,21 @@ class interface(Frame):
                         closest = val
                 higher_val = closest
             if lower_val != min(self.x) or higher_val != max(self.x):
-                self.min_point.remove()
-                self.min_text.remove()
-                self.canvas.get_tk_widget().update()
-                self.canvas.draw()
+                try:
+                    self.min_point.remove()
+                    self.min_text.remove()
+                    self.canvas.get_tk_widget().update()
+                    self.canvas.draw()
+                except:
+                    pass
             self.min_higher_box.delete(0, len(self.min_higher_box.get()))
             self.min_lower_box.delete(0, len(self.min_lower_box.get()))
             self.min_lower_box.insert(0, str(lower_val))
             self.min_higher_box.insert(0, str(higher_val))
             self.min_x_range = self.x[self.x.index(lower_val):self.x.index(higher_val)]
-            self.min_y_range = y[self.x.index(lower_val):self.x.index(higher_val)]
+            self.min_y_range = self.y[self.x.index(lower_val):self.x.index(higher_val)]
             ymin = min(self.min_y_range)
-            xmin = self.x[y.index(ymin)]
+            xmin = self.x[self.y.index(ymin)]
             self.min_point, = self.ax.plot(xmin, ymin, 'ko')
             min_str = 'Min: (' + str(xmin) + ',' + str(ymin) + ')'
             self.min_text = self.ax.annotate(min_str, (xmin, ymin + ymin / 100))
