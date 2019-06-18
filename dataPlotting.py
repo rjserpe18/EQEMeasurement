@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from collections import defaultdict
 import pandas as pd
+from graphing_interface import interface
 
 import csv
 
@@ -10,28 +11,25 @@ columns = []
 word_list = []
 
 
-asTextFile = open('EQE_Data.csv','r')
+asTextFile = open('EQE_Data_6_17_new.csv','r')
 columns = asTextFile.read().split('\n')
 
 i = 0
 
 # clearing the file
 
-filename = 'EQE_Data_Formatted.csv'
-f = open(filename,"w+")
-f.close()
-
 wavelengths = []
 eQEVals = []
 
-with open('EQE_Data_Formatted.csv', 'a') as csvFile:
+with open('EQE_Data_6_17_new.csv', 'a') as csvFile:
     cwriter = csv.writer(csvFile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
 
-    cwriter.writerow(['wavlength','power (mW)','current (uA)','EQE'])
-
 
     for row in columns:
+
+
+
 
         values = columns[i].split(',')
 
@@ -60,3 +58,5 @@ with open('EQE_Data_Formatted.csv', 'a') as csvFile:
 
         i+=1
 
+
+    interface(wavelengths,eQEVals)

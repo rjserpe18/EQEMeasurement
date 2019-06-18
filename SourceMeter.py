@@ -128,12 +128,3 @@ def zero_sources(self):
         print("An error has occurred.\nPossible reason: method must take a Keithley2400 object")
         return "ERROR"
 
-
-rm = visa.ResourceManager()
-print(rm.list_resources())
-
-keithley = Keithley2400('GPIB1::24::INSTR')
-
-print(keithley.current)
-
-print(keithley.compliance_current)

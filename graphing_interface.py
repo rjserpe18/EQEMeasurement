@@ -6,7 +6,6 @@ from tkinter import filedialog
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib import pyplot as plt
 from matplotlib.backends.backend_tkagg import NavigationToolbar2Tk
-import url
 from PIL import ImageTk,Image
 from tkinter import PhotoImage
 matplotlib.use('TkAgg')
@@ -22,7 +21,7 @@ from PIL import Image, ImageDraw, ImageTk
 
 # Python 2/3 compatibility
 try:
-    basestring
+    basestring = ''
 except NameError:
     basestring = str
 
@@ -129,7 +128,6 @@ class interface(Frame):
 
     def __init__(self,x,y):
         super().__init__()
-        Tk()
         self.initUI(x,y)
         self.mainloop()
 
@@ -137,11 +135,6 @@ class interface(Frame):
         self.x = x
         self.y = y
         self.master.title('options area')
-        self.photo = ImageTk.PhotoImage(file='D:\gray_gradient.jpg')
-        self.Artwork = Label(self.master, image=self.photo)
-        self.Artwork.photo = self.photo
-        self.Artwork.place(anchor='nw')
-        self.Artwork.grid(row=0, column=0)
 
         outer_options_frame = Frame(self.master)
         outer_options_frame.grid(row=0, column=0)
@@ -157,8 +150,7 @@ class interface(Frame):
         self.ax.spines['left'].set_visible(True)
         self.line = self.ax.plot(x, y, color='#009999', linewidth=2.3)
 
-        GradientFrame(outer_options_frame, from_color="#FCFCFC", to_color="#404040", height=500).place(anchor='nw',
-                                                                                                 bordermode=INSIDE)
+        #GradientFrame(outer_options_frame, from_color=(252,252,252), to_color=(64,64,64), height=500).place(anchor='nw',bordermode=INSIDE)
         options_frame = Frame(outer_options_frame)
         options_frame.pack(side=LEFT, expand=True, fill='x')
 
