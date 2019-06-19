@@ -1,6 +1,6 @@
 import seaborn as sns
 import warnings
-from tkinter import Tk, Frame, Menu, Button,Label,Entry,Canvas,Checkbutton,IntVar
+from tkinter import Tk, Frame, Menu, Button,Label,Entry,Canvas,Checkbutton,IntVar, Scale
 from tkinter import LEFT, TOP, X, FLAT, RAISED,RIGHT, SUNKEN, GROOVE, RIDGE
 import matplotlib
 from tkinter import filedialog
@@ -134,6 +134,7 @@ class interface(Frame):
         self.mainloop()
 
     def initUI(self, sets):
+
         self.current_palette = sns.cubehelix_palette(len(sets), start=2, rot=0, dark=.2, light=.7, reverse=True)
         self.sets = sets
         self.master.title('options area')
@@ -147,7 +148,7 @@ class interface(Frame):
         matplotlib.style.use('seaborn-darkgrid')
 
         self.ax = self.fig.add_subplot(1,1,1)
-        self.ax.set_facecolor((160/255,160/255,160/255))
+        self.ax.set_facecolor((210/255,210/255,210/255))
         self.ax.set_alpha(0.0)
         self.ax.spines['left'].set_visible(True)
 
@@ -207,9 +208,10 @@ class interface(Frame):
             self.min_points.append(min_point)
             x = set[0]
             y = set[1]
-            # line = self.ax.plot(x, y, linewidth=3, color=self.current_palette[sets.index(set)])
-            self.ax.scatter(x, y, linewidth=3, color=self.current_palette[sets.index(set)])
-
+            line = self.ax.plot(x, y, linewidth=3, color=self.current_palette[sets.index(set)])
+            # self.ax.scatter(x, y, linewidth=3, color=self.current_palette[sets.index(set)])
+            dataset_label = Label(options_frame, text='Dataset ' + str(sets.index(set)+1), fg='#009999', bg = '#C0C0C0')
+            dataset_label.pack(expand=True, fill = 'x')
             max_frame = Frame(options_frame, bg='#C0C0C0')
             max_frame.pack(expand = True, fill='x')
             max_OnOff = IntVar()
@@ -252,18 +254,21 @@ class interface(Frame):
             self.min_higher_boxes.append(min_higher_box)
             self.min_lower_boxes.append(min_lower_box)
 
-        self.xmin, self.xmax, self.ymin, self.ymax = plt.axis()
+            integrate_frame = Frame(options_frame)
+
+
+        self.xlow, self.xhigh, self.ylow, self.yhigh = plt.axis()
         xlimit_frame = Frame(options_frame)
         xlimit_frame.pack(expand=True, fill='x')
         xlim_label = Label(xlimit_frame, text='X Limit', fg='#009999', bg='#C0C0C0')
         xlim_label.pack(side=LEFT)
         self.xlim_lower_box = Entry(xlimit_frame, width=7, fg='#009999')
-        self.xlim_lower_box.insert(0, self.xmin)
+        self.xlim_lower_box.insert(0, self.xlow)
         self.xlim_lower_box.pack(side=LEFT, expand=True, fill='x')
         xlim_higher_label = Label(xlimit_frame, text='to', fg='#009999', bg='#C0C0C0')
         xlim_higher_label.pack(side=LEFT)
         self.xlim_higher_box = Entry(xlimit_frame, width=7, fg='#009999')
-        self.xlim_higher_box.insert(0, self.xmax)
+        self.xlim_higher_box.insert(0, self.xhigh)
         self.xlim_higher_box.pack(side=LEFT, expand=True, fill='x')
 
         ylimit_frame = Frame(options_frame)
@@ -271,13 +276,21 @@ class interface(Frame):
         ylim_label = Label(ylimit_frame, text='Y Limit', fg='#009999', bg='#C0C0C0')
         ylim_label.pack(side=LEFT)
         self.ylim_lower_box = Entry(ylimit_frame, width=7, fg='#009999')
-        self.ylim_lower_box.insert(0, self.ymin)
+        self.ylim_lower_box.insert(0, self.ylow)
         self.ylim_lower_box.pack(side=LEFT, expand=True, fill='x')
         ylim_higher_label = Label(ylimit_frame, text='to', fg='#009999', bg='#C0C0C0')
         ylim_higher_label.pack(side=LEFT)
         self.ylim_higher_box = Entry(ylimit_frame, width=7, fg='#009999')
-        self.ylim_higher_box.insert(0, self.ymax)
+        self.ylim_higher_box.insert(0, self.yhigh)
         self.ylim_higher_box.pack(side=LEFT, expand=True, fill='x')
+
+        bg_slider_frame = Frame(options_frame)
+        bg_slider_frame.pack(expand = True, fill = 'x')
+        bg_slider_label = Label(bg_slider_frame, text = 'Background Color', fg = '#009999', bg = '#C0C0C0')
+        bg_slider_label.pack(expand = True, fill = 'x')
+        self.bg_slider = Scale(bg_slider_frame, from_=0, to=255, orient='horizontal', bg = '#C0C0C0')
+        self.bg_slider.set(210)
+        self.bg_slider.pack(expand = True, fill = 'x')
 
         apply_button_frame = Frame(options_frame, bg='#C0C0C0')
         apply_button_frame.pack()
@@ -292,21 +305,30 @@ class interface(Frame):
         self.master.protocol("WM_DELETE_WINDOW", lambda: close(self))
 
     def xlimit(self):
-        if self.xlim_higher_box.get() != self.xmax or self.xlim_lower_box.get() != self.xmin:
-            higher_text = self.xlim_higher_box.get()
+        if self.xlim_lower_box.get() != self.xlow:
+
             lower_text = self.xlim_lower_box.get()
-            print(lower_text, higher_text)
-            self.ax.set_xlim(xmax=float(higher_text), xmin=float(lower_text))
+            self.ax.set_xlim(xmin=float(lower_text))
+            self.canvas.get_tk_widget().update()
+            self.canvas.draw()
+
+        if self.xlim_higher_box.get() != self.xhigh:
+            higher_text = self.xlim_higher_box.get()
+            self.ax.set_xlim( xmax = float(higher_text))
             self.canvas.get_tk_widget().update()
             self.canvas.draw()
 
 
     def ylimit(self):
-        if self.ylim_higher_box.get() != self.ymax or self.ylim_lower_box.get() != self.ymin:
-            higher_text = self.ylim_higher_box.get()
+        if self.ylim_lower_box.get() != self.ylow:
             lower_text = self.ylim_lower_box.get()
-            print(lower_text, higher_text)
-            self.ax.set_xlim(xmax=float(higher_text), xmin=float(lower_text))
+            self.ax.set_ylim(ymin=float(lower_text))
+            self.canvas.get_tk_widget().update()
+            self.canvas.draw()
+
+        if self.ylim_higher_box.get() != self.yhigh:
+            higher_text = self.ylim_higher_box.get()
+            self.ax.set_ylim(ymax=float(higher_text))
             self.canvas.get_tk_widget().update()
             self.canvas.draw()
 
@@ -314,6 +336,12 @@ class interface(Frame):
         title_text = self.title_box.get()
         self.title_box.delete(0, len(title_text))
         self.ax.set_title(title_text)
+        self.canvas.get_tk_widget().update()
+        self.canvas.draw()
+
+    def background(self):
+        color = self.bg_slider.get()
+        self.ax.set_facecolor((color / 255, color / 255, color / 255))
         self.canvas.get_tk_widget().update()
         self.canvas.draw()
 
@@ -381,7 +409,7 @@ class interface(Frame):
                 xmax = x[y.index(ymax)]
                 max_point, = self.ax.plot(xmax, ymax, 'ko')
                 self.max_points[self.max_boxes.index(box)] = max_point
-                max_str = 'Max: (' + str(xmax) + ',' + str(ymax) + ')'
+                max_str = 'Max: (' + str(round(xmax,2)) + ',' + str(round(ymax,2)) + ')'
                 max_text = self.ax.annotate(max_str,(xmax,ymax + ymax/100), annotation_clip = False)
 
                 self.max_texts[self.max_boxes.index(box)] = max_text
@@ -441,7 +469,7 @@ class interface(Frame):
                 xmin = x[y.index(ymin)]
                 min_point, = self.ax.plot(xmin, ymin, 'ko')
                 self.min_points[self.min_boxes.index(box)] = min_point
-                min_str = 'Min: (' + str(xmin) + ',' + str(ymin) + ')'
+                min_str = 'Min: (' + str(round(xmin,2)) + ',' + str(round(ymin,2)) + ')'
                 min_text = self.ax.annotate(min_str, (xmin, ymin + ymin / 100), annotation_clip=False)
 
                 self.min_texts[self.min_boxes.index(box)] = min_text
@@ -459,9 +487,21 @@ class interface(Frame):
         self.ylimit()
         self.maximum()
         self.minimum()
+        self.background()
     def lin_reg(self):
         ...
     def integral(self):
-        ...
+        x_last = x[0]
+        y_last = y[0]
+
+        a = 0
+        for x_val in x:
+            x_ind = x.index(x_val)
+            y_val = y[x_ind]
+            da = abs((x_val - x_last) / 2 * (y_val + y_last))
+
+            x_last = x_val
+            y_last = y_val
+            a += da
 
 
