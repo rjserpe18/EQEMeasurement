@@ -4,11 +4,18 @@
     <list default="true" id="e92486df-75ec-45e3-afcc-d7a4f9c49f85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EQEMeasurement.py" beforeDir="false" afterPath="$PROJECT_DIR$/EQEMeasurement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EQE_Data_6_17_new.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EQE_Data_6_17_new_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EQE_Data_Formatted.csv" beforeDir="false" afterPath="$PROJECT_DIR$/retrieveAndGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MonoChromater.py" beforeDir="false" afterPath="$PROJECT_DIR$/MonoChromater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceMeter.py" beforeDir="false" afterPath="$PROJECT_DIR$/SourceMeter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataPlotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPlotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPlotting.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/graphing_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphing_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerMeter.py" beforeDir="false" afterPath="$PROJECT_DIR$/powerMeter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schematic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testt.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,38 +28,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EQEMeasurement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="77" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="77" />
+            <state relative-caret-position="-3">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EQE_Data_6_17_new.csv">
+        <entry file="file://$PROJECT_DIR$/EQE_Data_6_17_new_2.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" lean-forward="true" selection-end-column="37" />
+            <state relative-caret-position="30">
+              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/statistics.py">
+        <entry file="file://$PROJECT_DIR$/retrieveAndGraph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="310" selection-start-line="310" selection-end-line="310" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scratch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="642">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -60,71 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PowerMeter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataPlotting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/graphing_interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1436">
-              <caret line="191" selection-start-line="191" selection-end-line="191" />
+            <state relative-caret-position="405">
+              <caret line="303" column="18" lean-forward="true" selection-start-line="303" selection-start-column="18" selection-end-line="303" selection-end-column="18" />
               <folding>
-                <element signature="e#1#82#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SourceMeter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MonoChromater.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/progressBar.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -141,6 +82,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print</find>
+      <find>KeyError: 'plotly_domain'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,28 +113,33 @@
         <option value="$PROJECT_DIR$/integratingSphere.py" />
         <option value="$PROJECT_DIR$/testt.py" />
         <option value="$PROJECT_DIR$/EQE_Data.csv" />
-        <option value="$PROJECT_DIR$/PowerMeter.py" />
         <option value="$PROJECT_DIR$/dataAcquisition.py" />
         <option value="$PROJECT_DIR$/dataPlottinh.py" />
         <option value="$PROJECT_DIR$/EQE_Dat.csv" />
         <option value="$PROJECT_DIR$/EQE_Data.txt" />
         <option value="$PROJECT_DIR$/EQE_Data_Formatted.csv" />
-        <option value="$PROJECT_DIR$/graphing_interface.py" />
         <option value="$PROJECT_DIR$/stat_test.py" />
         <option value="$PROJECT_DIR$/SourceMeter.py" />
-        <option value="$PROJECT_DIR$/MonoChromater.py" />
-        <option value="$PROJECT_DIR$/EQEMeasurement.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/divModTest.py" />
-        <option value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/progressBar.py" />
         <option value="$PROJECT_DIR$/dataPlotting.py" />
-        <option value="$PROJECT_DIR$/scratch.py" />
         <option value="$PROJECT_DIR$/EQE_Data_6_17_new.csv" />
+        <option value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/progressBar.py" />
+        <option value="$PROJECT_DIR$/MonoChromater.py" />
+        <option value="$PROJECT_DIR$/scratch.py" />
+        <option value="$PROJECT_DIR$/retrievAndGraph.py" />
+        <option value="$PROJECT_DIR$/EQELoadingBarTest.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/EQEMeasurement.py" />
+        <option value="$PROJECT_DIR$/EQE_Data_6_17_new_2.csv" />
+        <option value="$PROJECT_DIR$/PowerMeter.py" />
+        <option value="$PROJECT_DIR$/graphing_interface.py" />
+        <option value="$PROJECT_DIR$/retrieveAndGraph.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="1586" />
-    <option name="width" value="94" />
+    <option name="x" value="1159" />
+    <option name="width" value="521" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -208,6 +155,15 @@
             <path>
               <item name="EQEMeasurement" type="b2602c69:ProjectViewProjectNode" />
               <item name="EQEMeasurement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EQEMeasurement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="EQEMeasurement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -237,7 +193,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scratch">
+  <component name="RunManager" selected="Python.retrieveAndGraph">
+    <configuration name="EQELoadingBarTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EQEMeasurement" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EQELoadingBarTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="EQEMeasurement (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EQEMeasurement" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -280,7 +257,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dataPlotting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="PowerMeter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EQEMeasurement" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -292,7 +269,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPlotting.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PowerMeter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,7 +278,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="divModTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="retrieveAndGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EQEMeasurement" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,32 +286,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/divModTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="progressBar" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EQEMeasurement" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/progressBar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/retrieveAndGraph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -366,19 +322,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.EQEMeasurement" />
-      <item itemvalue="Python.EQEMeasurement (1)" />
       <item itemvalue="Python.scratch" />
-      <item itemvalue="Python.progressBar" />
-      <item itemvalue="Python.divModTest" />
-      <item itemvalue="Python.dataPlotting" />
+      <item itemvalue="Python.PowerMeter" />
+      <item itemvalue="Python.EQELoadingBarTest" />
+      <item itemvalue="Python.EQEMeasurement (1)" />
+      <item itemvalue="Python.retrieveAndGraph" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.dataPlotting" />
-        <item itemvalue="Python.progressBar" />
-        <item itemvalue="Python.divModTest" />
+        <item itemvalue="Python.retrieveAndGraph" />
         <item itemvalue="Python.EQEMeasurement (1)" />
+        <item itemvalue="Python.EQELoadingBarTest" />
+        <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.PowerMeter" />
       </list>
     </recent_temporary>
   </component>
@@ -396,16 +352,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="862" y="0" width="818" height="1050" extended-state="6" />
+    <frame x="835" y="0" width="845" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.46800503" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27184466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49668476" visible="true" weight="0.24869384" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3985765" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39811912" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -443,35 +399,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Keithley2400PyMeasure.py" />
-    <entry file="file://$PROJECT_DIR$/Instrument.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pyvisa/resources/resource.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/pyvisa/resources/messagebased.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5792">
-          <caret line="412" selection-start-line="412" selection-end-line="412" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/schematic.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/56698893-35E6-41E2-91FF-BCCF7C75780D/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/values2.txt" />
-    <entry file="file://$PROJECT_DIR$/url.py" />
-    <entry file="file://$PROJECT_DIR$/screenClicker.py" />
     <entry file="file://$PROJECT_DIR$/data.py" />
     <entry file="file://$PROJECT_DIR$/InstrumentOperations.py" />
     <entry file="file://$PROJECT_DIR$/newportMeter.py" />
@@ -512,16 +439,6 @@
     <entry file="file://$PROJECT_DIR$/EQE_Dat.csv" />
     <entry file="file://$PROJECT_DIR$/EQE_Data.txt" />
     <entry file="file://$PROJECT_DIR$/EQE_Data.csv" />
-    <entry file="file://$PROJECT_DIR$/testt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SourceMeterTest.py" />
     <entry file="file://$PROJECT_DIR$/integratingSphere.py" />
     <entry file="file://$PROJECT_DIR$/dataAcquisition.py" />
@@ -549,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.7/lib/python/site-packages/chart_studio/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3375">
-          <caret line="366" selection-start-line="366" selection-end-line="366" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stat_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -569,23 +479,10 @@
     <entry file="file://$PROJECT_DIR$/EQE_Data_6_17.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp-plot.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/keithley2400.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2762">
           <caret line="389" selection-start-line="389" selection-end-line="389" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MonoChromater.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,16 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EQEMeasurement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="77" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/divModTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -616,66 +503,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/progressBar.py">
+    <entry file="file://$PROJECT_DIR$/.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EQE_Data_6_17_new.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state>
+          <caret column="37" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EQE_Data_6_17_new_2.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphing_interface.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/statistics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1436">
-          <caret line="191" selection-start-line="191" selection-end-line="191" />
-          <folding>
-            <element signature="e#1#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PowerMeter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1531">
+          <caret line="295" column="11" selection-start-line="295" selection-start-column="11" selection-end-line="295" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataPlotting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="582">
+          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/statistics.py">
+    <entry file="file://$PROJECT_DIR$/schematic.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EQE_Data_6_17_new.csv">
+    <entry file="file://$PROJECT_DIR$/temp-plot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" lean-forward="true" selection-end-column="37" />
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymeasure/instruments/keithley/progressBar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrieveAndPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="73" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrievAndGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EQELoadingBarTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="15">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.7/lib/python/site-packages/plotly/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="1131" selection-start-line="1131" selection-end-line="1131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.7/lib/python/site-packages/chart_studio/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.7/lib/python/site-packages/plotly/offline/offline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1222">
+          <caret line="534" selection-start-line="534" selection-end-line="534" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PowerMeter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoChromater.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EQEMeasurement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EQE_Data_6_17_new_2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrieveAndGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphing_interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="303" column="18" lean-forward="true" selection-start-line="303" selection-start-column="18" selection-end-line="303" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

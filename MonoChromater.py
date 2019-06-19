@@ -1,17 +1,9 @@
 import visa
-import pymeasure
 import time
-from PowerMeter import PowerMeter
-
-
 
 #32 steps changes by 1 nanometer
 #it also waits up on the command
 #to get something to move the way you want it to, just place the zero move command after it
-
-
-#steps the monochromater ahead by the desired number of nanometers
-
 
 class MonoChromater:
 
@@ -84,4 +76,10 @@ class MonoChromater:
 
 
         print("ready for measurements!")
+
+
+
+
+
+
 

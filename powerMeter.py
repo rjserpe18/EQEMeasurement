@@ -4,8 +4,6 @@ import statistics
 
 class PowerMeter:
 
-
-
     def __init__(self,address,nickName):
 
         rm = visa.ResourceManager()
@@ -19,9 +17,6 @@ class PowerMeter:
         self.address = address
         self.fullName = 'test'
         self.nickName = nickName
-
-
-
 
     def getNickName(self):
         return "Nickname: "+self.nickName
@@ -42,8 +37,6 @@ class PowerMeter:
 
     def getWavelength(self):
         return float(self.powerMeter.query('sense:corr:wav?'))
-
-
 
     def getPower(self):
         power_W = float(self.powerMeter.query('measure:power?'))
@@ -89,8 +82,6 @@ class PowerMeter:
 
             i += 1
 
-
-
     def zero(self):
         reading = self.measurePowerUntilSteady()
         if reading < 0:
@@ -112,6 +103,4 @@ class PowerMeter:
         reading = self.measurePowerUntilSteady()
         result = (reading + shift)*10**6
         print('result= ',result,'µW')
-
-
 

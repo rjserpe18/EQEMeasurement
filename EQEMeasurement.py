@@ -1,10 +1,12 @@
+from PowerMeter import PowerMeter
+from MonoChromater import MonoChromater
+import SourceMeter as SM
+
+from pymeasure.instruments.keithley import Keithley2400
 import csv
 import statistics
 import time
-from PowerMeter import PowerMeter
-from MonoChromater import MonoChromater
-from pymeasure.instruments.keithley import Keithley2400
-import SourceMeter as SM
+from tqdm import tqdm
 
 #initializing values
 currentPower = 0
@@ -22,7 +24,7 @@ lowerBound = int(input("Enter the lower bound for the range over which you'd lik
 
 upperBound = int(input("Enter the upper bound for the range over which you'd like to measure the EQE, and press enter."))
 
-stepInt = float(input("Enter the step interval for the wavelength (i.e. if you'd like to measure every 5nm, enter 5). Note: the smaller the step, the longer you can expect the measurement to take."))
+stepInt = int(input("Enter the step interval for the wavelength (i.e. if you'd like to measure every 5nm, enter 5). Note: the smaller the step, the longer you can expect the measurement to take."))
 
 
 
@@ -31,9 +33,9 @@ stepInt = float(input("Enter the step interval for the wavelength (i.e. if you'd
 
 thorLabs = PowerMeter('USB0::0x1313::0x8072::P2003101::0::INSTR', "thor labs")
 
-keithley = Keithley2400('GPIB1::24::INSTR')
+keithley = Keithley2400('GPIB0::24::INSTR')
 
-JV = MonoChromater('GPIB0::1::INSTR')
+JV = MonoChromater('GPIB1::1::INSTR')
 
 
 #writing headers into the file
@@ -42,13 +44,13 @@ with open('EQE_Data_6_17_new_2.csv', 'a') as csvFile:
     cwriter = csv.writer(csvFile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
 
-    cwriter.writerow(['wavlength','power (mW)','current (uA)','EQE'])
+    cwriter.writerow(['Wavelength','Power (mW)','Current (uA)','EQE - Uncorrected'])
 
 #measuring the values
 #
-# JV.prepForMeasurements(lowerBound)
+JV.prepForMeasurements(lowerBound)
 
-for i in range(float(lowerBound),float(upperBound),float(stepInt)):
+for i in tqdm(range(int(lowerBound),int(upperBound),int(stepInt))):
 
 
 

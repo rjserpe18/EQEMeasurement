@@ -151,8 +151,6 @@ class interface(Frame):
         self.ax.set_alpha(0.0)
         self.ax.spines['left'].set_visible(True)
 
-        GradientFrame(outer_options_frame, from_color="#FCFCFC", to_color="#404040", height=1200, width=800).place(anchor='nw',
-                                                                                                 bordermode=INSIDE)
         # w, h = self.master.winfo_screenwidth(), self.master.winfo_screenheight()
         # if self.master.winfo_screenwidth() != w or self.master.winfo_screenheight()
         options_frame = Frame(outer_options_frame)
